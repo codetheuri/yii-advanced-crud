@@ -1,60 +1,65 @@
-<p align="center">
-    <a href="https://github.com/yiisoft" target="_blank">
-        <img src="https://avatars0.githubusercontent.com/u/993323" height="100px">
-    </a>
-    <h1 align="center">Yii 2 Advanced Project Template</h1>
-    <br>
-</p>
+# Yii Advanced Car Database Application
 
-Yii 2 Advanced Project Template is a skeleton [Yii 2](https://www.yiiframework.com/) application best for
-developing complex Web applications with multiple tiers.
+This Yii Advanced application manages a car database with CRUD (Create, Read, Update, Delete) operations. The car database functionality is implemented as a module on the backend side. The application utilizes the AdminLTE theme for a modern and responsive admin interface.
 
-The template includes three tiers: front end, back end, and console, each of which
-is a separate Yii application.
+## Table of Contents
 
-The template is designed to work in a team development environment. It supports
-deploying the application in different environments.
+- [Features](#features)
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Usage](#usage)
+- [AdminLTE Theme](#adminlte-theme)
+- [Modules](#modules)
 
-Documentation is at [docs/guide/README.md](docs/guide/README.md).
 
-[![Latest Stable Version](https://img.shields.io/packagist/v/yiisoft/yii2-app-advanced.svg)](https://packagist.org/packages/yiisoft/yii2-app-advanced)
-[![Total Downloads](https://img.shields.io/packagist/dt/yiisoft/yii2-app-advanced.svg)](https://packagist.org/packages/yiisoft/yii2-app-advanced)
-[![build](https://github.com/yiisoft/yii2-app-advanced/workflows/build/badge.svg)](https://github.com/yiisoft/yii2-app-advanced/actions?query=workflow%3Abuild)
+## Features
 
-DIRECTORY STRUCTURE
--------------------
+- **CRUD Operations:** Add, delete, update, and view car records.
+- **AdminLTE Integration:** Stylish and responsive admin interface.
+- **Yii Advanced Structure:** Separate frontend and backend applications.
 
-```
-common
-    config/              contains shared configurations
-    mail/                contains view files for e-mails
-    models/              contains model classes used in both backend and frontend
-    tests/               contains tests for common classes    
-console
-    config/              contains console configurations
-    controllers/         contains console controllers (commands)
-    migrations/          contains database migrations
-    models/              contains console-specific model classes
-    runtime/             contains files generated during runtime
-backend
-    assets/              contains application assets such as JavaScript and CSS
-    config/              contains backend configurations
-    controllers/         contains Web controller classes
-    models/              contains backend-specific model classes
-    runtime/             contains files generated during runtime
-    tests/               contains tests for backend application    
-    views/               contains view files for the Web application
-    web/                 contains the entry script and Web resources
-frontend
-    assets/              contains application assets such as JavaScript and CSS
-    config/              contains frontend configurations
-    controllers/         contains Web controller classes
-    models/              contains frontend-specific model classes
-    runtime/             contains files generated during runtime
-    tests/               contains tests for frontend application
-    views/               contains view files for the Web application
-    web/                 contains the entry script and Web resources
-    widgets/             contains frontend widgets
-vendor/                  contains dependent 3rd-party packages
-environments/            contains environment-based overrides
-```
+## Prerequisites
+
+Before you begin, ensure you have the following installed:
+
+- [PHP](https://www.php.net/) (>= 7.4)
+- [Composer](https://getcomposer.org/)
+- [MySQL](https://www.mysql.com/) or [MariaDB](https://mariadb.org/)
+
+## Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/your-username/your-repository.git
+2. cd your-repository
+   ```composer install```
+  cd backend
+  ```composer install```
+3. Create databases for both frontend and backend applications.
+
+4. Configure the database connection in frontend/config/main-local.php and backend/config/main-local.php.
+
+5. Run migrations for both frontend and backend applications:
+   ```cd frontend
+      php yii migrate
+     cd ../backend
+   php yii migrate
+   ```
+6. Set up your web server to point to the frontend/web directory.
+
+7. Access the frontend application in your browser.
+
+8. To access the backend admin interface, visit /backend and use the credentials:
+
+     Username: admin
+     Password: admin
+10. Usage
+   Visit the backend to view the list of cars and perform CRUD operations.
+11. Access the backend admin interface to manage the car database module.
+12. AdminLTE Theme
+This application uses the AdminLTE theme for a modern and responsive user interface. For more details on customization and features, refer to the AdminLTE documentation.
+
+13. Modules
+The car database functionality is implemented as a module on the backend side. The module is located in the backend/modules directory.   
+
