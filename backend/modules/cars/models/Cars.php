@@ -34,7 +34,7 @@ class Cars extends \yii\db\ActiveRecord
     {
         return [
             [['car_reg', 'car_name', 'car_type', 'car_model', 'car_price', ], 'required'],
-            [['car_model'], 'string', ],
+            [['car_model','logo'], 'string', ],
             [['car_price'], 'integer'],
             [['registered_at'], 'safe'],
             [['file'], 'file'],
@@ -56,7 +56,8 @@ class Cars extends \yii\db\ActiveRecord
             'car_model' => 'Car Model',
             'car_price' => 'Car Price',
             'registered_at' => 'Registered At',
-            'file' => 'Car Image'
+            'file' => 'Car Image',
+            'logo' => 'image location'
         ];
     }
 }
